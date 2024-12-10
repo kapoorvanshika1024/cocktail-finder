@@ -1,0 +1,38 @@
+<div class="container">
+    <!-- Error message -->
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+    </div>
+  
+    <!-- Display cocktails -->
+    <div *ngIf="cocktails.length > 0" class="cocktail-list">
+      <div *ngFor="let cocktail of cocktails" class="cocktail-item">
+        <h3>{{ cocktail.strDrink }}</h3>
+        <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" />
+        <p>{{ cocktail.strInstructions }}</p>
+  
+        <!-- Button to add cocktail to favorites -->
+        <button (click)="addToFavorites(cocktail)" class="favorite-button">
+          <span [class.favorited]="isFavorite(cocktail)">❤️</span> Add to Favorites
+        </button>
+      </div>
+    </div>
+  
+    <!-- No cocktails message -->
+    <div *ngIf="cocktails.length === 0 && !error" class="no-data">
+      <p>No cocktails to display.</p>
+    </div>
+  
+    <!-- Favorites Section -->
+    <div *ngIf="favorites.length > 0" class="favorites-section">
+      <h2>Your Favorite Cocktails</h2>
+      <div class="cocktail-list">
+        <div *ngFor="let cocktail of favorites" class="cocktail-item">
+          <h3>{{ cocktail.strDrink }}</h3>
+          <img [src]="cocktail.strDrinkThumb" alt="{{ cocktail.strDrink }}" />
+          <p>{{ cocktail.strInstructions }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

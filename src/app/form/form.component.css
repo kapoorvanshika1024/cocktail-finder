@@ -1,0 +1,55 @@
+/* General styling for the form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Input fields and text area */
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Error messages */
+  div {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  /* Submit button */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Success message */
+  .success-message {
+    color: green;
+    font-size: 1.1em;
+    margin-top: 15px;
+  }
+  
