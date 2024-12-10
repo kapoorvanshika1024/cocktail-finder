@@ -1,59 +1,54 @@
-# CocktailFinder
+# Cocktail Finder
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+A simple Angular application to display cocktail information fetched from the Cocktail DB API. The app allows users to search for cocktails, view their details, and submit feedback through a form. It also features a favorites system to store user preferences.
 
-## Development server
+## Features
 
-To start a local development server, run:
+### Home Page:
+- A welcome page with a brief introduction to the app.
+- Navigation to other pages, including the cocktail search and feedback form.
 
-```bash
-ng serve
-```
+### Cocktail Data Page:
+- Displays a list of cocktails with their names and images.
+- Fetches data dynamically from the [Cocktail DB API](https://www.thecocktaildb.com/).
+- Shows additional details for each cocktail, including ingredients and instructions.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Favorites Page:
+- Users can add cocktails to their favorites list.
+- Displays a list of all the cocktails that the user has added to their favorites.
 
-## Code scaffolding
+### Feedback Form:
+- A feedback form to collect user input (Name, Email, and Message).
+- Implements form validation using Angular's Reactive Forms.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Responsive Design:
+- Optimized for both desktop and mobile screens to ensure a smooth user experience on any device.
 
-```bash
-ng generate component component-name
-```
+## Technologies Used
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Angular 16**: For building the single-page application.
+- **Angular Router**: For client-side routing.
+- **Reactive Forms**: For managing the feedback form with validation.
+- **HTTP Client**: For consuming the Cocktail DB API.
+- **CSS**: For styling the application and creating a responsive layout.
+- **TypeScript**: For type-safe programming.
+## API Reference
 
-```bash
-ng generate --help
-```
+**Cocktail DB API**  
+- **Base URL**: `https://www.thecocktaildb.com/api/json/v1/1`
+- **Endpoints**:
+  - `/search.php?s={search-term}`: Fetches a list of cocktails matching the search term.
+  - `/lookup.php?i={idDrink}`: Fetches detailed information for a specific cocktail.
 
-## Building
+## Future Enhancements
 
-To build the project run:
+- **Add Cocktail Search**: Enhance the app by adding a search feature for finding cocktails based on ingredients or names.
+- **Pagination**: Implement pagination to display more cocktails when the user scrolls or clicks a "load more" button.
+- **Favorites System**: Allow users to mark cocktails as favorites and store them for later.
+- **Cocktail Comparison**: Implement a feature to compare multiple cocktails.
+- **Animations and Enhanced UI**: Add animations, transitions, and improve the design with more detailed information cards.
 
-```bash
-ng build
-```
+## Live Demo
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Check out the live demo of the app on vercel: https://cocktail-finder-sigma.vercel.app/
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
